@@ -1,0 +1,31 @@
+// Variables
+$fontColor: #262338;
+$blue: #9ac1f0;
+$contrastGreen: #72fa93;
+$green: #a0e548;
+$red: #e45f2b;
+$yellow: #f6c445;
+$borderRadius: 5px;
+
+
+.main {
+	.navbar {
+		padding: 30px;
+
+		.navbar-brand {
+			color: $fontColor;
+			font-weight: 1000;
+		}
+
+		.nav-link {
+			color: $fontColor;
+			padding-right: 20px;
+			border-radius: $borderRadius;
+
+			&:hover {
+				color: $fontColor;
+				background-color: $blue;
+			}
+		}
+	}
+}
