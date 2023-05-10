@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;800;900&display=swap');
+
 // Variables
 $fontColor: #262338;
+$white: #fff;
 $blue: #9ac1f0;
 $contrastGreen: #72fa93;
 $green: #a0e548;
@@ -9,6 +12,9 @@ $borderRadius: 5px;
 
 
 .main {
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+
 	.navbar {
 		padding: 30px;
 
@@ -27,5 +33,83 @@ $borderRadius: 5px;
 				background-color: $blue;
 			}
 		}
+	}
+
+	.heroContainer {
+		display: flex;
+		height: 100vh;
+
+		.leftHeroDiv {
+			display: flex;
+			position: relative;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			flex: 1;
+
+			.boldText {
+				font-size: 80px;
+				font-weight: 900;
+				background: -webkit-linear-gradient(30deg, $blue 0%, $green 100%);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.namasteImage {
+				position: absolute;
+				width: 80px;
+				height: 80px;
+				top: 30%;
+				right: 80px;
+				rotate: 30deg;
+			}
+
+			.contactButton {
+				background-color: $blue;
+				padding: 12px;
+				border-radius: 5px;
+				cursor: pointer;
+
+				a {
+					font-weight: 500;
+					color: $white;
+				}
+			}
+
+			.contactButton:hover{
+				border: 2px solid black;
+			}
+		}
+
+		.rightHeroDiv {
+			position: relative;
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				right: -80%;
+				object-fit: contain;
+			}
+
+			@media screen and (max-width:800px) {
+				img {
+					object-fit: contain;
+					position: absolute;
+					right: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+	}
+
+	.mainContent2 {
+		background-color: #e45f2b;
+		height: 100vh;
 	}
 }
